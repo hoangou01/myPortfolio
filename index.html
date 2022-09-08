@@ -10,6 +10,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="./assets/css/css.css">
 
     <title>Phạm Minh Hoàng</title>
@@ -23,7 +25,7 @@
             for (var i = 0; i < reveals.length; i++) {
                 var windowHeight = window.innerHeight;
                 var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 150;
+                var elementVisible = 50;
 
                 if (elementTop < windowHeight - elementVisible) {
                     reveals[i].classList.add("active");
@@ -125,9 +127,9 @@
                         <h2>
                             About <span style="color: cadetblue;">Me</span>
                         </h2>
-                        <p>Being a calm person, quickly adapting to new environments, responsible , interested in
-                            finding solutions to problems.</p>
-                        <a class="showmyskill" onclick="toggleText()" href="#mySkills">Show my skill</a>
+                        <p class="aboutme-content_text hideContent">I consider myself as level-headed person. I have the ability
+                            to quickly adapt to new environments and have a strong sense of responsibility .For example, I always volunteer to be the leader and finish all homeworks before the deadline.</p>
+                        <a class="showmore" >Show More</a>
                     </div>
 
                 </div>
@@ -223,21 +225,23 @@
                 </a>
             </div>
             <div class="col-md-6">
-                <div class="project minesweeper">
-                    <img src="./assets/img/minesweeper3.png" alt="">
-                    <div class="project-info">
-                        <h4>Minesweeper game</h4>
-
-                        <p class="link text-success"><a href="https://github.com/hoangou01/minesweeper" target="_blank"
-                                class="text-success">https://github.com/hoangou01/minesweeper</a>
-                        </p>
-                        <p>công nghệ: </p>
-                        <p style="margin-top: -10px;">c# winform application</p>
-                        <a href="https://github.com/hoangou01/minesweeper" target="_blank"
-                            class="button_sourcecode">source code</a>
-
+                <a href="https://github.com/hoangou01/minesweeper" class="text-dark" target="_blank">
+                    <div class="project minesweeper">
+                        <img src="./assets/img/minesweeper3.png" alt="">
+                        <div class="project-info">
+                            <h4>Minesweeper game</h4>
+    
+                            <p class="link text-success"><a href="https://github.com/hoangou01/minesweeper" target="_blank"
+                                    class="text-success">https://github.com/hoangou01/minesweeper</a>
+                            </p>
+                            <p>công nghệ: </p>
+                            <p style="margin-top: -10px;">c# winform application , LinQ</p>
+                            <a href="https://github.com/hoangou01/minesweeper" target="_blank"
+                                class="button_sourcecode">source code</a>
+    
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
 
         </div>
@@ -336,7 +340,26 @@
             </div>
         </div>
     </div>
+    <script>
+        $("a.showmore").on("click", function () {
+            var $this = $(this);
+            var $content = $(".aboutme-content_text");
+            var linkText = $this.text().toUpperCase();
 
+            if (linkText === "SHOW MORE") {
+                linkText = "Show less";
+                
+                $content.switchClass("hideContent", "showContent", 500);
+                $this.css("margin-top","-6%");
+            } else {
+                linkText = "Show more";
+                $this.css("margin-top","4%");
+                $content.switchClass("showContent", "hideContent", 500);
+            };
+
+            $this.text(linkText);
+        });
+    </script>
 </body>
 
 </html>
