@@ -112,7 +112,7 @@
         </div>
     </div>
 
-    <div id="aboutme" class="reveal">
+    <div id="aboutme" class="container reveal">
         <div class="container">
             <div class="row">
                 <div class="col-md-7">
@@ -121,20 +121,21 @@
                     </div>
                 </div>
                 <div class="col-md-5 position-relative">
-                    <div class="aboutme-content">
+                    <div class="aboutme-content d-flex flex-column">
                         <h2>
                             About <span style="color: cadetblue;">Me</span>
                         </h2>
                         <p>Being a calm person, quickly adapting to new environments, responsible , interested in
                             finding solutions to problems.</p>
+                        <a class="showmyskill" onclick="toggleText()" href="#mySkills">Show my skill</a>
                     </div>
-                    <a class="showmyskill position-absolute" onclick="toggleText()" href="#mySkills">Show my skill</a>
+
                 </div>
-                
+
             </div>
         </div>
     </div>
-    <div id="mySkills" class="reveal">
+    <div id="mySkills" class="reveal container">
         <h2>
             My <span style="color: cadetblue;">Skills</span>
         </h2>
@@ -169,50 +170,57 @@
         </h2>
         <div class="row">
             <div class="col-md-6">
-                <div class="project lrcposay_project">
-                    <img src="./assets/img/project_lrcposay.png" alt="hình ảnh web laroche posay vietnam">
-                    <div class="project-info">
-                        <h4>larocheposay</h4>
-                        <p class="link text-success"><a href="https://hoangou01.github.io/larocheposay_hoang/"
-                                target="_blank" class="text-success">https://hoangou01.github.io/larocheposay_hoang/</a>
-                        </p>
-                        <p>công nghệ: </p>
-                        <p style="margin-top: -10px;">html5 , css , bootrap5 , javascript</p>
-                        <a href="https://github.com/hoangou01/larocheposay_hoang" target="_blank"
-                            class="button_sourcecode">source code</a>
+                <a href="https://hoangou01.github.io/larocheposay_hoang/" class="text-dark" target="_blank">
+                    <div class="project lrcposay_project">
+                        <img src="./assets/img/project_lrcposay.png" alt="hình ảnh web laroche posay vietnam">
+                        <div class="project-info">
+                            <h4>larocheposay</h4>
+                            <p class="link text-success"><a href="https://hoangou01.github.io/larocheposay_hoang/"
+                                    target="_blank"
+                                    class="text-success">https://hoangou01.github.io/larocheposay_hoang/</a>
+                            </p>
+                            <p>công nghệ: </p>
+                            <p style="margin-top: -10px;">html5 , css , bootrap5 , javascript</p>
+                            <a href="https://github.com/hoangou01/larocheposay_hoang" target="_blank"
+                                class="button_sourcecode">source code</a>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
             <div class="col-md-6">
-                <div class="project aboutme_project">
-                    <img src="./assets/img/Myportfolio.png" alt="My portfolio">
-                    <div class="project-info">
-                        <h4>Portfolio about me</h4>
-                        <p class="link text-success"><a href="https://hoangou01.github.io/myPortfolio/" target="_blank"
-                                class="text-success">https://hoangou01.github.io/myPortfolio/</a>
-                        </p>
-                        <p>công nghệ: </p>
-                        <p style="margin-top: -10px;">html5 , css , bootrap5 , javascript</p>
-                        <a href="https://github.com/hoangou01/myPortfolio" target="_blank"
-                            class="button_sourcecode">source code</a>
+                <a href="https://hoangou01.github.io/myPortfolio/" target="_blank" class="text-dark">
+                    <div class="project aboutme_project">
+                        <img src="./assets/img/Myportfolio.png" alt="My portfolio">
+                        <div class="project-info">
+                            <h4>Portfolio about me</h4>
+                            <p class="link text-success"><a href="https://hoangou01.github.io/myPortfolio/"
+                                    target="_blank" class="text-success">https://hoangou01.github.io/myPortfolio/</a>
+                            </p>
+                            <p>công nghệ: </p>
+                            <p style="margin-top: -10px;">html5 , css , bootrap5 , javascript</p>
+                            <a href="https://github.com/hoangou01/myPortfolio" target="_blank"
+                                class="button_sourcecode">source code</a>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
             <div class="col-md-6">
-                <div class="project H&M_project">
-                    <img src="./assets/img/Recruitment_project.png" alt="Recruitment project">
-                    <div class="project-info">
-                        <h4>Job search website</h4>
-                        <p class="link text-success"><a href="https://github.com/hoangou01/Recruitment-project"
-                                target="_blank"
-                                class="text-success">https://github.com/hoangou01/Recruitment-project</a>
-                        </p>
-                        <p>công nghệ: </p>
-                        <p style="margin-top: -10px;">html5 , css , bootrap5 , javascript , spring mvc</p>
-                        <a href="https://github.com/hoangou01/Recruitment-project" target="_blank"
-                            class="button_sourcecode">source code</a>
+                <a href="https://github.com/hoangou01/Recruitment-project" target="_blank" class="text-dark">
+                    <div class="project H&M_project">
+                        <img src="./assets/img/Recruitment_project.png" alt="Recruitment project">
+                        <div class="project-info">
+                            <h4>Job search website</h4>
+                            <p class="link text-success"><a href="https://github.com/hoangou01/Recruitment-project"
+                                    target="_blank"
+                                    class="text-success">https://github.com/hoangou01/Recruitment-project</a>
+                            </p>
+                            <p>công nghệ: </p>
+                            <p style="margin-top: -10px;">html5 , css , bootrap5 , javascript , spring mvc</p>
+                            <a href="https://github.com/hoangou01/Recruitment-project" target="_blank"
+                                class="button_sourcecode">source code</a>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
             <div class="col-md-6">
                 <div class="project minesweeper">
