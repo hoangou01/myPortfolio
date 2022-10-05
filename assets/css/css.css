@@ -2,7 +2,9 @@ body {
     background-color: #fff;
     font-size: 14px;
 }
-
+*:focus {
+    outline: none !important;
+}
 #nav {
     display: flex;
     justify-content: space-between;
@@ -590,14 +592,45 @@ h2 {
 .contact_li>span {
     text-align: left;
 }
+.message_form{
+    resize: none;
+}
+#send_section{
+    margin-top: 60px;
+}
+.btn_submit{
+    background-color: #000;
+     margin-top: 20px;
+    border: none;
 
+}
+#contactForm{
+    /* width: 70%; */
+    margin-top: 30px;
+     /* margin-left: 15%; */
+}
 #footer {
     background-color: #000;
     width: 100%;
     /* height: 50vh; */
     padding-left: 10%;
 }
-
+.footer_btn-sendEmail{
+    padding: 10px 10px;
+    background-color: #ccc;
+    color: #000;
+    border: none;
+    margin-left: -5px;
+}
+.message_form{
+    height: 40px;
+    margin-top: 40px !important;
+}
+.form-control , .message_form{
+    border: none;
+    margin-top: 30px;
+    border-bottom: 1px solid #ccc;
+}
 #footer h5 {
     color: #fff;
 }
@@ -608,11 +641,15 @@ h2 {
 
 .input_email {
     background-color: #000;
+    font-size: 14px;
     padding: 10px 10px;
     color: #ccc;
     border: 1px solid rgb(150, 150, 150);
 }
-
+.input_email:focus{
+    background-color: #000;
+    color: #fff;
+}
 .email_name {
     margin-top: 70px;
 }
@@ -641,6 +678,7 @@ h2 {
 
 .contact_socialmedia {
     margin-top: 70px;
+    margin-left: 50px;
 }
 
 .contact_socialmedia_ul {

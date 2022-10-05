@@ -3,7 +3,7 @@
     .hide-Tablet-Mobile {
         display: none;
     }
-
+    
 
 }
 
@@ -19,6 +19,19 @@
         font-size: 16px;
     }
     .footername{
+        font-size: 16px;
+    }
+    .footer_form-email{
+        position: relative;
+    }
+    .footer_btn-sendEmail{
+        position: absolute;
+        top: 0;
+        right: -1px;
+        padding: 10px 10px;
+        
+    }
+    #footer{
         font-size: 16px;
     }
     
@@ -105,10 +118,17 @@
         margin-left: -15px;
         font-size: 18px;
     }
+    .btn_submit{
+        margin-top: 10px !important;
+        
+    }
 
     /********** footer ****/
     .footername{
         display: none;
+    }
+    #footer{
+        padding-left: 5% !important;
     }
     .contact_socialmedia_ul {
         display: flex;
@@ -132,6 +152,9 @@
     .footername{
         margin-top: 10px;
     }
+    .contact_socialmedia{
+        margin-left: 0;
+    }
     /********** header *********/
     .custom-1 {
         border-bottom-left-radius: 0% 0%;
@@ -141,7 +164,7 @@
         height: 100vh;
         background-position: center;
         width: auto;
-        filter: brightness(80%);
+        filter: brightness(95%);
         
     }
     .nav_mobile{
