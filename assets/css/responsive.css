@@ -1,6 +1,166 @@
-/* Extra small devices (phones, less than 768px) */
+/***** mobile & tablet **********/
+@media (max-width : 1023px) {
+    .hide-Tablet-Mobile {
+        display: none;
+    }
 
-/* No media query since this is the default in Bootstrap */
 
-/* Small devices (tablets, 768px and up) */
+}
 
+/*********** tablet **********/
+@media (min-width : 740px) and (max-width : 1023px) {
+    .hide-Tablet {
+        display: none;
+    }
+
+    .contact_li,
+    .contact_li:nth-child(3) {
+        padding-left: 20px;
+        font-size: 16px;
+    }
+    .footername{
+        font-size: 16px;
+    }
+    
+}
+
+/*********** moible **********/
+@media (max-width : 739px) {
+    .hide-Mobile {
+        display: none;
+    }
+
+    .Show-Mobile {
+        display: block;
+    }
+
+    .aboutme-h2 {
+        text-align: center;
+        display: block;
+    }
+
+    #logo>a {
+        margin-left: 0px;
+    }
+
+    /***** about me *************/
+    .aboutme-content {
+        margin-top: 20px;
+    }
+
+    .aboutme-div {
+        margin-left: 50px;
+    }
+
+    .showmore {
+        width: 40%;
+        padding: 5px 0;
+        margin-left: -5%;
+
+    }
+
+    .aboutme-content p {
+        width: 100%;
+        margin-left: -5%;
+        /* padding: 10px -20px; */
+    }
+
+    /********** my skill ************/
+    #mySkills>h2 {
+        margin-bottom: -30px;
+    }
+
+    .myskill_li {
+        transform: scale(0.9);
+        margin-top: 30px;
+    }
+
+    .myskill_li span:last-child {
+        margin-top: 5px;
+    }
+
+    /*********project***********/
+    .project {
+        width: 98%;
+
+        margin-left: 1%;
+        padding-bottom: 50px;
+        /* padding: 10px 10px 10px 10px; */
+    }
+
+    .project-info {
+        padding: 40px 20px 20px 20px;
+        font-size: 16px;
+    }
+
+    .project-info .button_sourcecode {
+        width: 120px;
+    }
+
+
+    /********** contact**********/
+    .contact_li,
+    .contact_li:nth-child(3) {
+        padding-left: 0px;
+        margin-left: -15px;
+        font-size: 18px;
+    }
+
+    /********** footer ****/
+    .footername{
+        display: none;
+    }
+    .contact_socialmedia_ul {
+        display: flex;
+    }
+    .contact_socialmedia h5{
+        margin-bottom: 10px;
+        margin-top: 20px;
+    }
+    .contact_socialmedia > p:last-child{
+        margin-top: -15px;
+    }
+    .contact_socialmedia{
+        margin-top: 0px;
+    }
+    .navbar_footer_ul{
+        margin-top: 0;
+    }
+    .navbar_footer{
+        display: none;
+    }
+    .footername{
+        margin-top: 10px;
+    }
+    /********** header *********/
+    .custom-1 {
+        border-bottom-left-radius: 0% 0%;
+        border-bottom-right-radius: 0% 0%;
+    }
+    #header{
+        height: 100vh;
+        background-position: center;
+        width: auto;
+        filter: brightness(80%);
+        
+    }
+    .nav_mobile{
+        display: block;
+    }
+    .info .myname{
+        font-size: 40px;
+        color: rgb(26, 26, 26) !important;
+    }
+    #logo > a{
+        color: rgb(26, 26, 26) !important;
+    }
+    .description-info{
+        color: rgb(26, 26, 26) !important;
+    }
+    
+    .IconShowListNav > svg{
+        color: rgb(26, 26, 26) !important;
+
+    }
+
+}

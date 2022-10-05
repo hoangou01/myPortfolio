@@ -3,6 +3,11 @@ body {
     font-size: 14px;
 }
 
+#nav {
+    display: flex;
+    justify-content: space-between;
+}
+
 a {
     text-decoration: none;
 }
@@ -15,7 +20,7 @@ li {
     text-decoration: none;
     color: white;
     font-size: 30px;
-    margin-left: 50px;
+    margin-left: 30px;
     font-family: "Poppins";
 }
 
@@ -32,16 +37,71 @@ body {
     transition: all .5s;
 }
 
+.IconShowListNav {
+    cursor: pointer;
+    display: none;
+}
+
 .icon_fb,
 .icon_ins {
     width: 30px;
     height: 50px;
 }
 
+.nav_mobile {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 320px;
+    background-color: #fff;
+    max-width: 100%;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all linear .5s;
+}
+
+.nav_mobile-lists{
+    margin-top:65px;
+    width: 100%;
+    padding-top: 15px;
+    border-top: 1px solid cadetblue;
+}
+.nav__mobile-close{
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    font-size: 2rem;
+    color: cadetblue;
+   
+}
+.nav_input-mobile:checked ~ .nav_overlayout{
+    display: block;
+}
+.nav_input-mobile:checked ~ .nav_mobile{
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+.nav_mobile-link{
+    display: block;
+    color: #333;
+    margin-top: 20px;
+    padding: 0 10px;
+    font-size: 1.4rem;
+}
+.nav_mobile-link > a {
+    color: cadetblue;
+}
+
 #header {
-    background-image: url('./assets/img/hinhmain.jpg');
-    background-repeat: no-repeat;
+    
+    background-repeat: no-repeat !important;
     background-size: cover;
+    filter: brightness(90%);
+    /* filter: contrast(90%); */
     background-position: center;
     height: 100vh;
     background-attachment: fixed;
@@ -197,13 +257,13 @@ body {
     padding: 10px 0 40px 0;
     display: block;
     overflow: hidden;
-    
+
     margin-top: -10px;
     text-overflow: ellipsis;
     font-size: 20px;
 
     line-height: 1.5em;
-    
+
 
 }
 
@@ -218,36 +278,50 @@ h2 {
     font-size: 40px;
     margin-bottom: 20px;
 }
+.myimg{
+    position: relative;
+}
+.myimg> .mying-img_blur {
 
-.myimg>img {
     height: auto;
     width: 85%;
-    box-shadow: 1px 3px 10px 2px #e2dfdf;
+    /* box-shadow: 1px 3px 10px 2px #e2dfdf; */
     border-radius: 10px;
     transform: scale(1);
-    /* animation-name: scaleback; */
+    filter: blur(5px);
+    
+    opacity: .9;
     transition: all .5s;
 
 }
-
-.myimg>img:hover {
+.myimg> .mying-img_main{
+    position: absolute;
+    box-shadow: 1px 3px 10px 2px #e7e5e5;
+    width: 60%;
+    top: 12%;
+    left: 12%;
+    height: auto;
+    border-radius: 10px;
+}
+.myimg>.mying-img_main:hover {
     transform: scale(1.03);
 }
 
 .showmore {
     text-decoration: none;
     font-style: italic;
-    color: #000;
+    background-color: #000;
+    color: #Fff;
     border: 3px solid #000;
     font-size: 20px;
     font-weight: 500;
     letter-spacing: -0.9px;
     padding: 10px 0;
     text-align: center;
-    bottom: 20px;
-    left: 10px;
+    /* bottom: 20px;
+    left: 10px; */
     cursor: pointer;
-    margin-top: 30px;
+    margin-top: 10px;
     width: 30%;
 
 }
@@ -269,39 +343,40 @@ h2 {
     clear: both;
 }
 
-.myskill>ul {
-    display: flex;
+.myskill {
+    /* display: flex; */
     margin-top: 50px;
-    padding: 0;
+    /* padding: 0; */
 
 
 }
 
-.myskill>ul>li {
+.myskill_li {
+    text-align: center;
 
-    flex: 1;
     display: flex;
     flex-direction: column;
     cursor: pointer;
     transform: scale(1);
     transition: all .2s;
+    margin-top: 20px;
 }
 
-.myskill>ul>li:hover {
+.myskill_li:hover {
     transform: scale(1.1);
 
 }
 
-.myskill>ul>li:hover span:last-child {
+.myskill_li:hover span:last-child {
     color: cadetblue;
 }
 
-.myskill>ul>li>span:last-child {
+.myskill_li>span:last-child {
     margin-top: 20px;
     text-align: center;
 }
 
-.myskill>ul>li>span:first-child {
+.myskill_li>span:first-child {
     /* margin-left: -20px; */
     text-align: center;
 }
@@ -315,7 +390,7 @@ h2 {
 
 #mySkills {
     margin-top: 90px;
-
+    margin-bottom: -20px;
     visibility: visible;
     animation-duration: 1s;
     animation-name: fadeInUp;
@@ -355,7 +430,7 @@ h2 {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     /* border-radius: 20px; */
-    
+
 
 }
 
@@ -445,22 +520,23 @@ h2 {
     margin-top: 60px;
 }
 
-.contact_ul>li>span:last-child {
+.contact_li>span:last-child {
     margin-left: 25px;
 }
 
-.contact_ul>li>span:last-child>p:last-child {
+.contact_li>span:last-child>p:last-child,
+.contact_li>span:last-child>p:last-child a {
     margin-top: -15px;
     font-weight: 500;
 
     color: cadetblue;
 }
 
-.contact_ul>li>span:last-child>p:first-child {
+.contact_li>span:last-child>p:first-child {
     opacity: .7;
 }
 
-.contact_ul>li>span:first-child:hover {
+.contact_li>span:first-child:hover {
     transform: scale(1.2);
     transition: all .5s;
 }
@@ -471,33 +547,54 @@ h2 {
     margin-top: 8px;
 }
 
-.contact_ul>li:last-child {
-    border: none;
-    margin-top: -10px;
-
-}
 
 .contact_ul {
+    /* display: flex; */
     margin-top: 30px;
+    padding-left: 30px;
     margin-bottom: 30px;
 }
 
-.contact_ul>li {
-    border-right: 1px solid rgb(231, 230, 230);
-    flex: 1;
-    padding-left: 50px;
+.contact_li {
+    /* border-right: 1px solid rgb(231, 230, 230); */
+
+    padding-left: 20px;
     text-align: center;
-    padding-right: 10px;
+    /* padding-left: 50px; */
+    margin-top: 20px;
+    font-size: 16px;
 
 
 }
-.contact_ul>li>span{
+
+.contact_li:nth-child(3) {
+    padding-left: 40px;
+}
+
+.contact_li:nth-child(3)>span:first-child {
+    transform: scale(1.1);
+}
+
+.contact_li:nth-child(3)>span:first-child:hover {
+    transform: scale(1.2);
+}
+
+.contact_li>span:first-child {
+    margin-top: -6px;
+}
+
+.contact_li>span:last-child {
+    margin-left: 15px;
+}
+
+.contact_li>span {
     text-align: left;
 }
+
 #footer {
     background-color: #000;
     width: 100%;
-    height: 50vh;
+    /* height: 50vh; */
     padding-left: 10%;
 }
 
@@ -581,7 +678,7 @@ h2 {
     overflow: hidden;
     line-height: 1em;
     max-height: 5em;
-    
+
 }
 
 .showContent {
@@ -592,9 +689,25 @@ h2 {
 .showContent {
     height: auto;
 }
-.aboutme-content_text{
+
+.aboutme-content_text {
     -webkit-transition: all .5s;
     -moz-transition: all .5s;
     -o-transition: all .5s;
     transition: all .5s;
+}
+
+.aboutme-h2 {
+    text-align: center;
+    display: none;
+}
+
+.nav_overlayout {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
 }
