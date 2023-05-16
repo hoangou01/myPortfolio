@@ -355,7 +355,7 @@ h2 {
 
 .myskill_li {
     text-align: center;
-
+    
     display: flex;
     flex-direction: column;
     cursor: pointer;
@@ -385,6 +385,7 @@ h2 {
 
 .icon-radius {
     border-radius: 50%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
     height: 100px;
     width: 100px;
     /* border: 1px solid #000; */
