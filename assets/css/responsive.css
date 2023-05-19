@@ -196,7 +196,7 @@
         display: block;
     }
     .info{
-        margin-top: 2%;
+        margin-top: 90px !important;
     }
     .info .myname {
         font-size: 40px;
