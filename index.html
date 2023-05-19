@@ -29,7 +29,15 @@
 
     </style>
     <script>
-        function reveal() {
+         enableMenu = () => {
+            document.querySelector('.nav_overlayout').classList.add("d-none")
+            document.querySelector(".nav_mobile").classList.add("d-none")
+        }
+        showMenu = ()=> {
+            document.querySelector(".nav_mobile").classList.remove("d-none")
+            document.querySelector('.nav_overlayout').classList.remove('d-none')
+        }
+        reveal = ()=> {
             var reveals = document.querySelectorAll(".reveal");
 
             for (var i = 0; i < reveals.length; i++) {
@@ -57,7 +65,7 @@
         <nav class="navbar navbar-expand-sm navbar-dark">
             <div class="container-fluid">
                 <div id="logo">
-                    <a href="#aboutme" id="">Minh Hoang</a>
+                    <a href="#aboutme" id="">HOANG PHAM</a>
                 </div>
 
                 <ul class="navbar-nav hide-Mobile">
@@ -99,7 +107,7 @@
                     </li>
 
                 </ul>
-                <label for="nav_input-mobile" class="IconShowListNav Show-Mobile">
+                <label for="nav_input-mobile" onclick="showMenu()" class="IconShowListNav Show-Mobile">
                     <svg xmlns="http://www.w3.org/2000/svg" style="color: #fff;" width="40" height="40"
                         fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
                         <path fill-rule="evenodd"
@@ -120,15 +128,16 @@
                     </label>
 
                     <ul class="nav_mobile-lists">
-                        <li class="nav_mobile-link"><a href="#header">Home</a></li>
-                        <li class="nav_mobile-link"><a href="#aboutme">About me</a></li>
-                        <li class="nav_mobile-link"><a href="#mySkills">Skills</a></li>
-                        <li class="nav_mobile-link"><a href="#projects">Projects</a></li>
-                        <li class="nav_mobile-link"><a href="#contact_section">Contact</a></li>
-                        <li class="nav_mobile-link"><a href="https://www.facebook.com/profile.php?id=100009396856849"
-                                target="_blank" rel="noopener noreferrer">Facebook</a></li>
-                        <li class="nav_mobile-link"><a href="https://github.com/hoangou01" target="_blank"
-                                rel="noopener noreferrer">Github</a></li>
+                        <li class="nav_mobile-link"><a onclick="enableMenu()" href="#header">Home</a></li>
+                        <li class="nav_mobile-link"><a onclick="enableMenu()" href="#aboutme">About me</a></li>
+                        <li class="nav_mobile-link"><a onclick="enableMenu()" href="#mySkills">Skills</a></li>
+                        <li class="nav_mobile-link"><a onclick="enableMenu()" href="#projects">Projects</a></li>
+                        <li class="nav_mobile-link"><a onclick="enableMenu()" href="#contact_section">Contact</a></li>
+                        <li class="nav_mobile-link"><a onclick="enableMenu()"
+                                href="https://www.facebook.com/profile.php?id=100009396856849" target="_blank"
+                                rel="noopener noreferrer">Facebook</a></li>
+                        <li class="nav_mobile-link"><a onclick="enableMenu()" href="https://github.com/hoangou01"
+                                target="_blank" rel="noopener noreferrer">Github</a></li>
                     </ul>
                 </div>
             </div>
@@ -146,7 +155,7 @@
                     <div class="col-md-6 col-lg-5 col-sm-12 col-xs-12">
                         <div class="info">
                             <h1 class="myname text-light">Hello my name is Pham Minh Hoang.</h1>
-                            <p class="description-info text-light">I'm intern backend developer</p>
+                            <p class="description-info text-light">I'm backend developer</p>
                             <a href="#aboutme" class="aboutme">About me</a>
                         </div>
                     </div>
@@ -173,9 +182,14 @@
                         <h2 class="hide-Mobile">
                             About <span style="color: cadetblue;">Me</span>
                         </h2>
-                        <p class="aboutme-content_text hideContent">I consider myself as level-headed person. I have the
+                        <p class="aboutme-content_text hideContent">
+                            Hi, I’m Hoang. I'm final year computer science student at HCMC Open University. I’m a web
+                            designer and backend developer. I'm currently working at VIVAS (a member of VNPT
+                            Technology). I love creating engaging user experiences that are both functional and
+                            engaging.
+                            I consider myself as level-headed person. I have the
                             ability
-                            to quickly adapt to new environments and have a strong sense of responsibility .For example,
+                            to quickly adapt to new environments and have a strong sense of responsibility. For example,
                             I always volunteer to be the leader and finish all homeworks before the deadline.</p>
                         <a class="showmore">Show More</a>
                     </div>
@@ -352,7 +366,7 @@
                 <!-- Form submit button -->
                 <div class="d-grid">
                     <button class="btn btn-primary btn-lg btn_submit" onclick="sendEmailToMe(); reset();"
-                       type="submit" >Send</button>
+                        type="submit">Send</button>
                 </div>
 
             </div>
@@ -523,7 +537,7 @@
             }
             emailjs.send("service_jpf7847", "template_03q90zk", params).then(function (res) {
                 alert("send email succesfully !");
-            },function(error){
+            }, function (error) {
                 alert("send email unsuccesfully !");
             });
         }
