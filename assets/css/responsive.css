@@ -195,7 +195,9 @@
     .nav_mobile {
         display: block;
     }
-
+    .info{
+        margin-top: 2%;
+    }
     .info .myname {
         font-size: 40px;
         color: #292727 !important;
